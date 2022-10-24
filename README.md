@@ -1,6 +1,13 @@
-Definição do Projeto Desenvolvido no Curso de Lógica de Programação
+# Tecnologias utilizadas:
+1 - Java
+2 - MySQL
 
-Todo App
+# Abrir Banco de dados 
+1 - Iniciar o XAMP e MYSQL 
+2 - Clicar em Admin para inicializar banco de dados 
+3 - Para XAMP e MYSQL clicar em STOP
+
+Definição do Projeto Desenvolvido no Curso de Lógica de Programação
 
 Descrição: Aplicação para o gerenciamento de projetos e as tarefas envolvidas nesse projetos
 
@@ -34,8 +41,3 @@ Regras de negócio:
 -Não irá conter um sistema de login
 -Não haverá o conceito de usuario 
 -Toda tarefa deve pertencer a um projeto
-
-Tecnologias utilizadas:
--Java
--MySQL
--
