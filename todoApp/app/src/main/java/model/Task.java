@@ -33,6 +33,10 @@ private Date updatedAt;
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
     }
+    
+    public Task() {
+    this.createdAt = new Date();
+    }
 
    
 
