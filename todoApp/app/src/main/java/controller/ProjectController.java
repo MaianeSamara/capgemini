@@ -21,7 +21,7 @@ import util.ConnectionFactory;
 public class ProjectController {
 
     public void save(Project project) {
-        String sql = "INSERT INTO projects (name, description, createdAt, updatedAt) VALUES (?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO projects (name, description, createdAt, updatedAt) VALUES (?, ?, ?, ?)";
 
         Connection connection = null;
         PreparedStatement statement = null;
@@ -36,10 +36,10 @@ public class ProjectController {
             statement.setDate(3, new Date(project.getCreatedAt().getTime()));
             statement.setDate(4, new Date(project.getUpdatedAt().getTime()));
 
-            //Execcuta a sql para inserção dos dados
+            //Executa a sql para inserção dos dados
             statement.execute();
-        } catch (Exception ex) {
-            throw new RuntimeException("Erro ao salvar o projeto" + ex.getMessage(), ex);
+        } catch (SQLException ex) {
+            throw new RuntimeException("Erro ao salvar o projeto", ex);
         } finally {
             ConnectionFactory.closeConnection(connection, statement);
         }
@@ -47,7 +47,7 @@ public class ProjectController {
 
     public void update(Project project) {
         String sql = "UPDATE projects SET "
-                + "name = ?, description = ?, createdAt = ?, updatedAt = ?, WHERE id = ?";
+                + "name = ?, description = ?, createdAt = ?, updatedAt = ? WHERE id = ?";
 
         Connection connection = null;
         PreparedStatement statement = null;
@@ -69,14 +69,14 @@ public class ProjectController {
             //Executa a sql para inserção de dados
             statement.execute();
         } catch (SQLException ex) {
-            throw new RuntimeException("Erro ao atualizar o projeto " + ex.getMessage(), ex);
+            throw new RuntimeException("Erro ao atualizar o projeto ", ex);
         } finally {
             ConnectionFactory.closeConnection(connection, statement);
         }
     }
 
     public List<Project> getAll() {
-        String sql = "SELECT * FROM projects = ?";
+        String sql = "SELECT * FROM projects";
 
         List<Project> projects = new ArrayList<>();
 
@@ -115,7 +115,7 @@ public class ProjectController {
 
     }
 
-    public void removeById(int id) {
+    public void removeById(int idProject) {
         String sql = "DELETE FROM projects WHERE id = ?";
 
         Connection connection = null;
@@ -124,7 +124,7 @@ public class ProjectController {
         try {
             connection = ConnectionFactory.getConnection();
             statement = connection.prepareStatement(sql);
-            statement.setInt(1, id);
+            statement.setInt(1, idProject);
             statement.execute();
         } catch (SQLException ex) {
             throw new RuntimeException("Erro ao deletar o projeto", ex);

@@ -18,9 +18,16 @@ private String description;
 private Date createdAt;
 private Date updatedAt;
 
-    public Project() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public Project(int id, String name, String description, Date createdAt, Date updatedAt) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
     }
+
+    public Project() {
+     }
 
     public int getId() {
         return id;
@@ -61,15 +68,7 @@ private Date updatedAt;
     public void setUpdatedAt(Date updatedAt) {
         this.updatedAt = updatedAt;
     }
-
-    public Project(int id, String name, String description, Date createdAt, Date updatedAt) {
-        this.id = id;
-        this.name = name;
-        this.description = description;
-        this.createdAt = createdAt;
-        this.updatedAt = updatedAt;
-    }
-
+    
     @Override
     public String toString() {
         return "Project{" + "id=" + id + ", name=" + name + ", description=" + description + ", createdAt=" + createdAt + ", updatedAt=" + updatedAt + '}';
