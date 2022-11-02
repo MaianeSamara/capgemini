@@ -50,6 +50,7 @@ public class MainScreen extends javax.swing.JFrame {
 
         jScrollPanelTasks = new javax.swing.JScrollPane();
         jTableTasks = new javax.swing.JTable();
+        jMenu1 = new javax.swing.JMenu();
         jPanelToolBar = new javax.swing.JPanel();
         jLabelToolBarTitle = new javax.swing.JLabel();
         jLabelToolBarSubtitle = new javax.swing.JLabel();
@@ -106,6 +107,8 @@ public class MainScreen extends javax.swing.JFrame {
             }
         });
         jScrollPanelTasks.setViewportView(jTableTasks);
+
+        jMenu1.setText("jMenu1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(600, 800));
@@ -443,6 +446,7 @@ public class MainScreen extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelToolBarSubtitle;
     private javax.swing.JLabel jLabelToolBarTitle;
     private javax.swing.JList<String> jListProjects;
+    private javax.swing.JMenu jMenu1;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanelEmptyList;
     private javax.swing.JPanel jPanelProjectList;
