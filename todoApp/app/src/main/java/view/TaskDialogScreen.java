@@ -120,6 +120,7 @@ public class TaskDialogScreen extends javax.swing.JDialog {
         jLabelName.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabelName.setText("Nome");
 
+        jTextFieldName.setText("dfs");
         jTextFieldName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldNameActionPerformed(evt);
@@ -141,6 +142,7 @@ public class TaskDialogScreen extends javax.swing.JDialog {
 
         jTextAreaNotes.setColumns(20);
         jTextAreaNotes.setRows(5);
+        jTextAreaNotes.setToolTipText("");
         jScrollPaneNotes.setViewportView(jTextAreaNotes);
 
         jFormattedTextFieldDeadline.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter()));
